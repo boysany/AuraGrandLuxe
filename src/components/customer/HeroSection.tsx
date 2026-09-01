@@ -39,7 +39,7 @@ export const HeroSection: React.FC = () => {
   ];
 
   return (
-    <section id="hero-section" className="relative min-h-[85vh] flex flex-col justify-between overflow-hidden bg-[#080C14]">
+    <section id="hero-section" className="relative min-h-[85vh] flex flex-col justify-between overflow-hidden bg-[#fff4dc]">
       {/* High-Resolution Luxury Background with Warm Vignette */}
       <div className="absolute inset-0 z-0">
         <img
@@ -47,8 +47,8 @@ export const HeroSection: React.FC = () => {
           alt={activeHotel.name}
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[#080C14]/75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#080C14] via-transparent to-[#080C14]/60" />
+        <div className="absolute inset-0 bg-[#fff4dc]/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#fff4dc]/75 via-transparent to-[#fff4dc]/30" />
       </div>
 
       {/* Main Hero Header & Typography */}
@@ -60,7 +60,7 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* Hero Heading */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl text-white font-normal tracking-tight max-w-4xl leading-[1.1] mb-6">
+        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl text-[#563a2d] font-normal tracking-tight max-w-4xl leading-[1.1] mb-6">
           Architectural Grandeur & <br />
           <span className="italic font-serif font-light text-[#D4B996]">
             Uncompromising Hospitality
@@ -103,7 +103,7 @@ export const HeroSection: React.FC = () => {
         <form
           id="hero-booking-search-form"
           onSubmit={handleSearchSubmit}
-          className="bg-[#111827] border border-slate-800 rounded p-4 sm:p-5 shadow-xl text-white"
+          className="bg-white/90 backdrop-blur-md border border-[#ead7b8] rounded-2xl p-4 sm:p-5 shadow-xl text-[#563a2d]"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
             {/* Check-In Date */}

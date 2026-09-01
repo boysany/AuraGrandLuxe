@@ -2,21 +2,21 @@
 
 @layer base {
   :root {
-    --brand-accent: #C5A880;
-    --brand-accent-hover: #B3956E;
-    --brand-accent-light: #E2D3BE;
-    --surface-base: #f7f8fa;
-    --surface-panel: rgba(255, 255, 255, 0.78);
-    --surface-card: rgba(255, 255, 255, 0.88);
+    --brand-accent: #c97948;
+    --brand-accent-hover: #b76538;
+    --brand-accent-light: #f3dfc4;
+    --surface-base: #c97948;
+    --surface-panel: rgba(255, 248, 232, 0.78);
+    --surface-card: rgba(255, 252, 244, 0.9);
     --surface-elevated: rgba(255, 255, 255, 0.96);
-    --border-subtle: rgba(15, 23, 42, 0.09);
-    --border-medium: rgba(15, 23, 42, 0.15);
+    --border-subtle: rgba(91, 57, 39, 0.14);
+    --border-medium: rgba(91, 57, 39, 0.22);
   }
 
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #f7f8fa;
-    color: #172033;
+    background-color: #c97948;
+    color: #563a2d;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -102,6 +102,35 @@
 .accent-btn-primary:hover {
   background-color: #D4B996;
 }
+
+/* Resort editorial palette overrides */
+#hero-booking-search-form input, #hero-booking-search-form select { background: rgba(255, 250, 240, 0.92) !important; color: #563a2d !important; border-color: #e7cfae !important; }
+#hero-booking-search-form label { color: #7d5a44 !important; }
+#hero-booking-search-form .border-t { border-color: #ead7b8 !important; }
+
+#top-announcement-bar [class*="bg-[#0E1524"],
+#top-announcement-bar [class*="bg-[#05080E"] { background-color: rgba(91, 58, 43, 0.72) !important; }
+#top-announcement-bar [class*="border-slate"] { border-color: rgba(255, 244, 220, 0.22) !important; }
+#top-announcement-bar [class*="text-slate"] { color: #f5dfc1 !important; }
+#top-announcement-bar [class*="text-[#D4B996"],
+#top-announcement-bar [class*="text-[#C5A880"] { color: #ffd9a9 !important; }
+#top-announcement-bar > div > div:first-child { color: #fff4dc; }
+[class*="bg-slate-950"], [class*="bg-slate-900"], [class*="bg-slate-800"] { background-color: rgba(255, 248, 232, 0.88) !important; }
+[class*="text-slate-100"], [class*="text-slate-200"], [class*="text-slate-300"] { color: #563a2d !important; }
+[class*="text-slate-400"], [class*="text-slate-500"] { color: #8d6a55 !important; }
+
+
+body { background-color: #c97948; }
+#customer-guest-portal { background: #fff4dc !important; }
+#top-announcement-bar { background: #5b3a2b !important; color: #fff4dc !important; border-color: rgba(255, 244, 220, 0.22) !important; }
+.enterprise-panel { background: rgba(255, 248, 232, 0.72); border-color: rgba(91, 58, 43, 0.14); }
+.enterprise-card { background: rgba(255, 252, 244, 0.86); border-color: rgba(91, 58, 43, 0.14); box-shadow: 0 12px 32px rgba(91, 58, 43, 0.08); }
+.accent-badge { background: rgba(201, 121, 72, 0.12); color: #a95f37; border-color: rgba(201, 121, 72, 0.28); }
+.accent-btn-primary { background-color: #c97948; color: #fffaf0; }
+.accent-btn-primary:hover { background-color: #b76538; }
+::-webkit-scrollbar-track { background: #fff4dc; }
+::-webkit-scrollbar-thumb { background: #c97948; }
+::-webkit-scrollbar-thumb:hover { background: #b76538; }
 
 @media print {
   body * {
