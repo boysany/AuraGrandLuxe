@@ -39,62 +39,44 @@ export const HeroSection: React.FC = () => {
   ];
 
   return (
-    <section id="hero-section" className="relative min-h-[85vh] flex flex-col justify-between overflow-hidden bg-[#080C14]">
-      {/* High-Resolution Luxury Background with Warm Vignette */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={activeHotel.heroImage}
-          alt={activeHotel.name}
-          className="w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-[#080C14]/75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#080C14] via-transparent to-[#080C14]/60" />
-      </div>
-
-      {/* Main Hero Header & Typography */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10 flex-1 flex flex-col justify-center items-center text-center">
-        {/* Palace Heritage Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded bg-[#111827]/90 border border-slate-700/80 text-[#D4B996] text-xs font-semibold tracking-wider uppercase mb-6 shadow-lg">
-          <Sparkles className="w-3.5 h-3.5 text-[#C5A880]" />
-          <span>{activeHotel.tagline}</span>
+    <section id="hero-section" className="relative overflow-hidden bg-[#fff4dc] px-4 pb-10 pt-8 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#fffaf0] via-[#fff0df] to-[#f58a46] shadow-[0_24px_70px_rgba(91,58,43,0.16)]">
+        <div className="grid items-center gap-8 px-6 pb-8 pt-10 sm:px-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:px-16 lg:pb-14 lg:pt-16">
+          <div className="relative z-10 max-w-xl">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#c97948]/30 bg-white/55 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-[#a65428] backdrop-blur-sm">
+              <Sparkles className="h-3.5 w-3.5 text-[#c97948]" />
+              <span>{activeHotel.tagline}</span>
+            </div>
+            <h1 className="max-w-lg font-serif text-4xl font-bold leading-[1.05] tracking-tight text-[#542d1c] sm:text-6xl lg:text-7xl">
+              Luxury and Tranquility
+              <span className="mt-2 block text-[#c95d25]">Meet {activeHotel.name}</span>
+            </h1>
+            <p className="mt-6 max-w-md text-sm leading-6 text-[#654638] sm:text-base">
+              Experience Michelin-starred dining, bespoke concierge services, and curated sanctuary suites in the heart of {activeHotel.city}.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <button onClick={openBookingWizard} className="rounded-full bg-[#e9671d] px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#c95717]">Book your stay</button>
+              <button onClick={() => setCustomerActiveTab('rooms')} className="flex items-center gap-2 rounded-full border border-[#6b3d28]/25 bg-white/55 px-5 py-3 text-sm font-semibold text-[#542d1c] backdrop-blur-sm transition hover:bg-white/80">
+                Explore suites <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
+          <div className="relative min-h-[18rem] overflow-hidden rounded-[1.75rem] bg-[#d8e6e7] sm:min-h-[25rem] lg:min-h-[31rem]">
+            <img src={activeHotel.heroImage} alt={activeHotel.name} className="h-full w-full object-cover object-center" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#542d1c]/25 via-transparent to-white/10" />
+            <div className="absolute bottom-5 left-5 rounded-2xl border border-white/60 bg-white/75 px-4 py-3 text-sm text-[#542d1c] shadow-lg backdrop-blur-md">
+              <span className="block text-lg font-bold text-[#c95d25]">25+</span>
+              <span>Years of hospitality</span>
+            </div>
+          </div>
         </div>
-
-        {/* Hero Heading */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl text-white font-normal tracking-tight max-w-4xl leading-[1.1] mb-6">
-          Architectural Grandeur & <br />
-          <span className="italic font-serif font-light text-[#D4B996]">
-            Uncompromising Hospitality
-          </span>
-        </h1>
-
-        {/* Subtitle */}
-        <p className="text-slate-300 text-base sm:text-lg max-w-2xl font-light leading-relaxed mb-8">
-          Experience Michelin-starred dining, bespoke concierge services, and curated sanctuary suites in the heart of {activeHotel.city}.
-        </p>
-
-        {/* Quick Discovery CTA Chips */}
-        <div className="flex flex-wrap justify-center gap-3 text-xs font-medium text-slate-300 mb-8">
-          <button
-            onClick={() => setCustomerActiveTab('rooms')}
-            className="flex items-center gap-1.5 px-4 py-2 rounded bg-[#111827] hover:bg-[#161F30] border border-slate-700/80 transition-colors text-slate-200 hover:text-white"
-          >
-            <span>Explore Rooms & Suites</span>
-            <ChevronRight className="w-3.5 h-3.5 text-[#D4B996]" />
-          </button>
-          <button
-            onClick={() => setCustomerActiveTab('dining')}
-            className="flex items-center gap-1.5 px-4 py-2 rounded bg-[#111827] hover:bg-[#161F30] border border-slate-700/80 transition-colors text-slate-200 hover:text-white"
-          >
-            <span>Michelin-Starred Dining</span>
-            <ChevronRight className="w-3.5 h-3.5 text-[#D4B996]" />
-          </button>
-          <button
-            onClick={() => setCustomerActiveTab('services')}
-            className="flex items-center gap-1.5 px-4 py-2 rounded bg-[#111827] hover:bg-[#161F30] border border-slate-700/80 transition-colors text-slate-200 hover:text-white"
-          >
-            <span>Spa & Chauffeur Services</span>
-            <ChevronRight className="w-3.5 h-3.5 text-[#D4B996]" />
-          </button>
+        <div className="mx-6 mb-6 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-[#c97948]/15 bg-[#c97948]/15 sm:grid-cols-4 lg:mx-16">
+          {[['25+', 'Years Experience'], ['5k+', 'Guests Hosted'], ['98%', 'Guest Satisfaction'], ['24/7', 'Concierge Care']].map(([value, label]) => (
+            <div key={label} className="bg-white/75 px-4 py-4 text-center backdrop-blur-sm sm:px-6">
+              <div className="text-2xl font-bold text-[#d65f22]">{value}</div>
+              <div className="mt-1 text-xs font-medium text-[#6f5347]">{label}</div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -103,7 +85,7 @@ export const HeroSection: React.FC = () => {
         <form
           id="hero-booking-search-form"
           onSubmit={handleSearchSubmit}
-          className="bg-[#111827] border border-slate-800 rounded p-4 sm:p-5 shadow-xl text-white"
+          className="bg-white/90 backdrop-blur-md border border-[#ead7b8] rounded-2xl p-4 sm:p-5 shadow-xl text-[#563a2d]"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
             {/* Check-In Date */}

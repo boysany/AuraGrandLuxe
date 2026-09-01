@@ -103,7 +103,7 @@ const MainAppContent: React.FC = () => {
   if (activePortal === 'super_admin') {
     return (
       <>
-        <div className="min-h-screen bg-slate-950 text-slate-100 p-6 sm:p-10">
+        <div className="min-h-screen bg-background text-foreground p-6 sm:p-10">
           <SuperAdminDashboard />
         </div>
         <NotificationDrawer
@@ -116,7 +116,7 @@ const MainAppContent: React.FC = () => {
 
   // Render Customer / Guest Experience Portal
   return (
-    <div id="customer-guest-portal" className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
+    <div id="customer-guest-portal" className="min-h-screen bg-background text-foreground flex flex-col font-sans">
       <Header
         onOpenNotifications={() => setIsNotifDrawerOpen(true)}
       />

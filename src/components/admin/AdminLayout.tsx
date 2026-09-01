@@ -135,7 +135,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
   };
 
   return (
-    <div id="admin-pms-layout" className="min-h-screen bg-[#080C14] flex flex-col md:flex-row text-slate-100 font-sans">
+    <div id="admin-pms-layout" className="min-h-screen bg-background flex flex-col md:flex-row text-foreground font-sans">
       {/* Desktop Persistent Sidebar */}
       <aside
         id="admin-sidebar"
