@@ -1,0 +1,6 @@
+{
+  "name": "Aura Grand Luxe — Hotel Booking & SaaS PMS",
+  "description": "Enterprise-grade luxury hotel booking engine and multi-property hospitality SaaS management platform with PMS, staff, housekeeping, dining, billing, maintenance, and analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
