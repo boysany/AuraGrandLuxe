@@ -5,18 +5,18 @@
     --brand-accent: #C5A880;
     --brand-accent-hover: #B3956E;
     --brand-accent-light: #E2D3BE;
-    --surface-base: #0B0F19;
-    --surface-panel: #111827;
-    --surface-card: #161F30;
-    --surface-elevated: #1F2A40;
-    --border-subtle: rgba(255, 255, 255, 0.08);
-    --border-medium: rgba(255, 255, 255, 0.14);
+    --surface-base: #f7f8fa;
+    --surface-panel: rgba(255, 255, 255, 0.78);
+    --surface-card: rgba(255, 255, 255, 0.88);
+    --surface-elevated: rgba(255, 255, 255, 0.96);
+    --border-subtle: rgba(15, 23, 42, 0.09);
+    --border-medium: rgba(15, 23, 42, 0.15);
   }
 
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #0B0F19;
-    color: #F1F5F9;
+    background-color: #f7f8fa;
+    color: #172033;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -31,6 +31,23 @@
     letter-spacing: 0.05em;
   }
 }
+
+/* White translucent visual language */
+[class*="bg-[#"],
+[class*="bg-slate-950"],
+[class*="bg-slate-900"],
+[class*="bg-slate-800"],
+[class*="bg-slate-700"] {
+  background-color: rgba(255, 255, 255, 0.78) !important;
+  color: #172033;
+}
+[class*="text-slate-100"],
+[class*="text-slate-200"],
+[class*="text-slate-300"],
+[class*="text-white"] { color: #263247 !important; }
+[class*="text-slate-400"],
+[class*="text-slate-500"] { color: #64748b !important; }
+[class*="border-slate"] { border-color: rgba(15, 23, 42, 0.12) !important; }
 
 /* Enterprise scrollbar */
 ::-webkit-scrollbar {
@@ -50,14 +67,16 @@
 
 /* Professional Enterprise Glass & Panel Utilities */
 .enterprise-panel {
-  background: #111827;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  backdrop-filter: blur(18px);
 }
 
 .enterprise-card {
-  background: #161F30;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+  backdrop-filter: blur(14px);
 }
 
 .enterprise-card-hover {
